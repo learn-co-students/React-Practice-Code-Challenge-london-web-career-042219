@@ -28,9 +28,8 @@ class App extends Component {
   eatSushi = id => {
     const index = this.state.sushis.findIndex(sushi => sushi.id === id);
     const altSushi = this.state.sushis[index];
-    const newWallet = this.state.wallet - this.state.sushis[index].price;
 
-    if (newWallet >= 0 && altSushi.eaten === false) {
+    if (this.state.wallet >= altSushi.price && altSushi.eaten === false) {
       const sushisRefresh = this.state.sushis;
       sushisRefresh[index].eaten = true;
 
