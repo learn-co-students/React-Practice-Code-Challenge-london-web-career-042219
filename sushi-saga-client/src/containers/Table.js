@@ -14,6 +14,7 @@ const Table = (props) => {
       <h1 className="remaining">
         You have: ${props.wallet} remaining!
       </h1>
+   
       <div className="table">
         <div className="stack">
           {
@@ -21,6 +22,9 @@ const Table = (props) => {
           }
         </div>
       </div>
+
+
+
     </Fragment>
   )
 }
